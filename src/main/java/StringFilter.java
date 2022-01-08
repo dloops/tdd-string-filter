@@ -1,4 +1,10 @@
 public class StringFilter {
-    public StringFilter(String text, int i) {
+
+
+
+
+    public String getChar(String text, int n) {
+        return String.valueOf(text.charAt(n));
     }
+
 }

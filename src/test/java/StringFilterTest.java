@@ -14,8 +14,11 @@ public class StringFilterTest {
     public void stringCharSelectionTest() {
         String text = "ITCLiNicAl";
         int n = 1;
-        StringFilter stringFilter = new StringFilter(text, n);
-        assertEquals("i", stringFilter);
+        String result;
+        StringFilter stringFilter = new StringFilter();
+        result = stringFilter.getChar(text, n);
+        assertEquals("T", result);
     }
+    
 
 }
