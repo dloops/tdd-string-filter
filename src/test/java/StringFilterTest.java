@@ -43,5 +43,11 @@ public class StringFilterTest {
         assertEquals("TLN", result);
     }
 
-
+    @Test
+    public void createUpperCaseStringFrom3Test() {
+        String result;
+        result = stringFilter.createNewString(text, 3);
+        assertEquals("CNA", result);
+    }
+    
 }
