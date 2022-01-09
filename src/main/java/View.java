@@ -2,11 +2,6 @@ import java.util.Scanner;
 
 public class View {
 
-    public void init() {
-        getUserStringInput();
-        getUserNumberInput();
-    }
-
     public String getUserStringInput() {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter text: ");
@@ -19,9 +14,12 @@ public class View {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter number: ");
         Integer number = input.nextInt();
-        System.out.print("You have entered: " + number);
+        System.out.print("You have entered: " + number + "\n");
         return number;
     }
 
+    public void showResult(String result) {
+        System.out.println("Your filtered text is " + result);
+    }
 
 }

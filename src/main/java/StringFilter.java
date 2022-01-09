@@ -2,11 +2,11 @@ import java.lang.String;
 
 public class StringFilter {
 
-    private View view;
     private String text;
 
-    public void init() {
-        createNewString(view.getUserStringInput(),view.getUserNumberInput());
+    public String init() {
+        View view = new View();
+        return createNewString(view.getUserStringInput(), view.getUserNumberInput());
     }
 
     public String getChar(String text, Integer n) {
