@@ -19,48 +19,55 @@ public class StringFilterTest {
         int n = 1;
         String result;
         result = stringFilter.getChar(text, n);
+
         assertEquals("T", result);
     }
 
     @Test
     public void createStringFrom0Test() {
         String result;
-        result = stringFilter.createNewString(0);
+        result = stringFilter.createNewString(text, 0);
+
         assertEquals("ITCLiNicAl", result);
     }
 
     @Test
     public void createUpperCaseStringFrom1Test() {
         String result;
-        result = stringFilter.createNewString(1);
+        result = stringFilter.createNewString(text, 1);
+
         assertEquals("ITCLNA", result);
     }
 
     @Test
     public void createUpperCaseStringFrom2Test() {
         String result;
-        result = stringFilter.createNewString(2);
+        result = stringFilter.createNewString(text, 2);
+
         assertEquals("TLN", result);
     }
 
     @Test
     public void createUpperCaseStringFrom3Test() {
         String result;
-        result = stringFilter.createNewString(3);
+        result = stringFilter.createNewString(text, 3);
+
         assertEquals("CNA", result);
     }
 
     @Test
     public void createUpperCaseStringFrom100Test() {
         String result;
-        result = stringFilter.createNewString(100);
+        result = stringFilter.createNewString(text, 100);
+
         assertEquals("", result);
     }
 
     @Test
     public void createUpperCaseStringFromNegativeTest() {
         String result;
-        result = stringFilter.createNewString(-1);
+        result = stringFilter.createNewString(text, -1);
+
         assertEquals("", result);
     }
 

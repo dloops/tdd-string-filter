@@ -3,13 +3,17 @@ import java.lang.String;
 public class StringFilter {
 
     private View view;
+    private String text;
+
+    public void init() {
+        createNewString(view.getUserStringInput(),view.getUserNumberInput());
+    }
 
     public String getChar(String text, Integer n) {
         return String.valueOf(text.charAt(n));
     }
 
-    public String createNewString(Integer n) {
-        String text = view.getUserInput();
+    public String createNewString(String text, Integer n) {
         String result = "";
         if (n == 0) return text;
         if (n < 0) return "";
