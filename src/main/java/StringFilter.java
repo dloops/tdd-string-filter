@@ -7,8 +7,14 @@ public class StringFilter {
     }
 
     public String createNewString(String text, Integer n) {
+        String result = "";
+        if (n == 0) return text;
 
-        return text;
+        for (int i = 0; i < text.length(); i++) {
+            if (Character.isUpperCase(text.charAt(i)))
+                result += text.charAt(i);
+        }
+        return result;
     }
 
 }

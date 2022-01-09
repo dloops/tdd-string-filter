@@ -24,10 +24,15 @@ public class StringFilterTest {
 
     @Test
     public void createStringFrom0Test() {
-        int n = 0;
         String result;
-        result = stringFilter.createNewString(text, n);
+        result = stringFilter.createNewString(text, 0);
         assertEquals("ITCLiNicAl", result);
     }
 
+    @Test
+    public void createUpperCaseStringFrom1Test() {
+        String result;
+        result = stringFilter.createNewString(text, 1);
+        assertEquals("ITCLNA", result);
+    }
 }
