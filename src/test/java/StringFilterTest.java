@@ -49,5 +49,13 @@ public class StringFilterTest {
         result = stringFilter.createNewString(text, 3);
         assertEquals("CNA", result);
     }
-    
+
+    @Test
+    public void createUpperCaseStringFrom100Test() {
+        String result;
+        result = stringFilter.createNewString(text, 100);
+        assertEquals("", result);
+    }
+
+
 }
