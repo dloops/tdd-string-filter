@@ -35,4 +35,13 @@ public class StringFilterTest {
         result = stringFilter.createNewString(text, 1);
         assertEquals("ITCLNA", result);
     }
+
+    @Test
+    public void createUpperCaseStringFrom2Test() {
+        String result;
+        result = stringFilter.createNewString(text, 2);
+        assertEquals("TLN", result);
+    }
+
+
 }
