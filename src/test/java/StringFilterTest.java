@@ -23,11 +23,11 @@ public class StringFilterTest {
     }
 
     @Test
-    public void createStringFromEveryNthCharacterTest() {
-        int n = 2;
+    public void createStringFrom0Test() {
+        int n = 0;
         String result;
         result = stringFilter.createNewString(text, n);
-        assertEquals("FAIL", result);
+        assertEquals("ITCLiNicAl", result);
     }
 
 }
