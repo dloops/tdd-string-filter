@@ -24,7 +24,7 @@ public class StringFilterTest {
     }
 
     @Test
-    public void createStringFrom0Test() {
+    public void createUpperCaseStringFrom0Test() {
         String result;
         result = stringFilter.createNewString(text, 0);
 
@@ -69,6 +69,15 @@ public class StringFilterTest {
         result = stringFilter.createNewString(text, -1);
 
         assertEquals("", result);
+    }
+
+    @Test
+    public void acceptDifferentCharactersTest() {
+        String specialString = "!tCL1Nical";
+        String result;
+        result = stringFilter.createNewString(specialString, 1);
+
+        assertEquals("!CL1N", result);
     }
 
 }

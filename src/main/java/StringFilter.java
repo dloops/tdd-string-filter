@@ -19,7 +19,7 @@ public class StringFilter {
         if (n < 0) return "";
 
         for (int i = n - 1; i < text.length(); i = i + n) {
-            if (Character.isUpperCase(text.charAt(i)))
+            if (!Character.isLowerCase(text.charAt(i)))
                 result += text.charAt(i);
         }
 
