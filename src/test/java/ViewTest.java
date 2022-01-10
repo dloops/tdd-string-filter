@@ -40,15 +40,18 @@ public class ViewTest {
 
     @Test
     public void showResultTest() {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
 
         StringFilter stringFilter = new StringFilter();
         String result = stringFilter.createNewString(inputText, inputNumber);
         view.showResult(result);
         String expectedString = "Your filtered text is TLN";
 
-        assertEquals(expectedString, outContent.toString().trim());
+        assertEquals(expectedString, out.toString().trim());
     }
+
+
+
 
 }

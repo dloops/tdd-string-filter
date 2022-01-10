@@ -22,4 +22,7 @@ public class View {
         System.out.println("Your filtered text is " + result);
     }
 
+    public void showCount(String result) {
+        System.out.println("hello");
+    }
 }

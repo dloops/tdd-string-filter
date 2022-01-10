@@ -1,7 +1,9 @@
 import java.lang.String;
+import java.util.HashMap;
 
 public class StringFilter {
 
+    public HashMap<String, Integer> charCountMap;
     private String text;
 
     public String init() {
@@ -9,12 +11,11 @@ public class StringFilter {
         return createNewString(view.getUserStringInput(), view.getUserNumberInput());
     }
 
-    public String getChar(String text, Integer n) {
-        return String.valueOf(text.charAt(n));
-    }
 
     public String createNewString(String text, Integer n) {
         String result = "";
+        int counter = 0;
+
         if (n == 0) return text;
         if (n < 0) return "";
 

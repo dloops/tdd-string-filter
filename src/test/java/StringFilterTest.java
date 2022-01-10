@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashMap;
+
 import static org.junit.Assert.assertEquals;
 
 public class StringFilterTest {
@@ -12,15 +14,6 @@ public class StringFilterTest {
     public void setup() {
         this.stringFilter = new StringFilter();
         text = "ITCLiNicAl";
-    }
-
-    @Test
-    public void stringCharSelectionTest() {
-        int n = 1;
-        String result;
-        result = stringFilter.getChar(text, n);
-
-        assertEquals("T", result);
     }
 
     @Test
@@ -79,5 +72,19 @@ public class StringFilterTest {
 
         assertEquals("!CL1N", result);
     }
+
+    @Test
+    public void characterCountMapTest() {
+        HashMap<String, Integer> testMap = new HashMap<String, Integer>() {{
+            put("I", 2);
+            put("C", 2);
+            put("L", 2);
+            put("N", 1);
+            put("A", 1);
+        }};
+
+        assertEquals(testMap, stringFilter.charCountMap);
+    }
+
 
 }
