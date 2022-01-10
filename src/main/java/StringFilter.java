@@ -8,15 +8,8 @@ public class StringFilter {
     private String text;
     private String result;
 
-    public String outputString() {
-        View view = new View();
-        return createNewString(view.getUserStringInput(), view.getUserNumberInput());
-    }
-
-
     public String createNewString(String text, Integer n) {
         result = "";
-        int counter = 0;
 
         if (n == 0) return text;
         if (n < 0) return "";
@@ -30,7 +23,7 @@ public class StringFilter {
 
     public String charCount(String text) {
         charCountMap = new HashMap<>();
-        String result = "";
+        result = "";
         char[] strArray = text.toCharArray();
 
         for (char c : strArray) {

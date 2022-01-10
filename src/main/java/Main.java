@@ -1,10 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        View view = new View();
-        StringFilter stringFilter = new StringFilter();
-
-        view.showResult(stringFilter.outputString());
-
+        Controller controller = new Controller();
+        while(true) {
+            controller.init();
+        }
     }
 }

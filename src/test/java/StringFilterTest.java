@@ -42,7 +42,7 @@ public class StringFilterTest {
 
     @Test
     public void createUpperCaseStringFrom3Test() {
-        String  result = stringFilter.createNewString(text, 3);
+        String result = stringFilter.createNewString(text, 3);
 
         assertEquals("CNA", result);
     }
