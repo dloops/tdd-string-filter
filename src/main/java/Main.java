@@ -4,7 +4,7 @@ public class Main {
         View view = new View();
         StringFilter stringFilter = new StringFilter();
 
-        view.showResult(stringFilter.init());
+        view.showResult(stringFilter.outputString());
 
     }
 }

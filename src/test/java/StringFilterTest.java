@@ -42,16 +42,14 @@ public class StringFilterTest {
 
     @Test
     public void createUpperCaseStringFrom3Test() {
-        String result;
-        result = stringFilter.createNewString(text, 3);
+        String  result = stringFilter.createNewString(text, 3);
 
         assertEquals("CNA", result);
     }
 
     @Test
     public void createUpperCaseStringFrom100Test() {
-        String result;
-        result = stringFilter.createNewString(text, 100);
+        String result = stringFilter.createNewString(text, 100);
 
         assertEquals("", result);
     }
@@ -75,16 +73,30 @@ public class StringFilterTest {
 
     @Test
     public void characterCountMapTest() {
-        HashMap<String, Integer> testMap = new HashMap<String, Integer>() {{
-            put("I", 2);
-            put("C", 2);
-            put("L", 2);
-            put("N", 1);
-            put("A", 1);
+        HashMap<Character, Integer> testMap = new HashMap<Character, Integer>() {{
+            put("I".charAt(0), 2);
+            put("C".charAt(0), 2);
+            put("L".charAt(0), 2);
+            put("N".charAt(0), 1);
+            put("A".charAt(0), 1);
         }};
 
-        assertEquals(testMap, stringFilter.charCountMap);
+        stringFilter.charCount("ICLINCAL");
+
+        assertEquals(testMap, stringFilter.getCharCountMap());
     }
 
+    @Test
+    public void characterCountTest() {
+        String expectedCount = "A = 1" + "\n" +
+                "C = 2" + "\n" +
+                "I = 2" + "\n" +
+                "L = 2" + "\n" +
+                "N = 1";
+
+        String result = stringFilter.charCount("ICLINCAL");
+
+        assertEquals(expectedCount, result);
+    }
 
 }

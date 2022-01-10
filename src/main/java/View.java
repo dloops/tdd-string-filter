@@ -23,6 +23,6 @@ public class View {
     }
 
     public void showCount(String result) {
-        System.out.println("hello");
+        System.out.println(result);
     }
 }
